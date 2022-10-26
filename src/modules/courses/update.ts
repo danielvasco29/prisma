@@ -1,13 +1,12 @@
 import { prisma } from "../../../prisma/PrismaClient"
 
-
 async function main() {
-    const update = await prisma.courses.update({
+    const update = await prisma.courses.updateMany({
         where: {
-            name: "Curso de NodeJS5"
+            name: "Curso de NodeJS6"
         },
         data: {
-            duration: 400
+            duration: 360
         }
     })
     console.log(update)
